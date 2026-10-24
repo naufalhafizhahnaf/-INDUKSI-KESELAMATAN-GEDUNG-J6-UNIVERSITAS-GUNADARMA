@@ -1,0 +1,38 @@
+%% Diagram 3 — Sequence Diagram
+%% Interaksi chat: Browser -> server.js -> OpenRouter
+sequenceDiagram
+    autonumber
+    actor U as Pengunjung
+    participant B as Browser
+    participant S as Server Node.js
+    participant O as OpenRouter API
+
+    U->>B: Buka website
+    B->>S: GET halaman dan aset
+    S-->>B: File statis
+    B-->>U: Tampilkan halaman
+
+    U->>B: Klik AI Assistant
+    B->>S: GET /api/status
+    S-->>B: online, model
+    B-->>U: Status koneksi AI
+
+    U->>B: Kirim pertanyaan
+    B->>S: POST /api/chat
+
+    alt Request tidak valid
+        S-->>B: 400 error
+        B-->>U: Pesan kesalahan
+    else Request valid
+        S->>O: POST chat/completions<br/>timeout 30 detik
+
+        alt Berhasil
+            O-->>S: 200 content
+            S-->>B: 200 answer dan model
+            B-->>U: Tampilkan jawaban AI
+        else Gagal setelah 3 percobaan
+            O-->>S: Error
+            S-->>B: 502 error dan code
+            B-->>U: Tampilkan jawaban cadangan
+        end
+    end

@@ -1,0 +1,70 @@
+﻿@startuml 02-activity-chatbot
+' Diagram 2 â€” Activity Diagram (swimlane)
+' Alur penggunaan I-HSSE Assistant
+
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName Segoe UI
+skinparam defaultFontSize 14
+skinparam swimlaneWidth 260
+skinparam swimlaneTitleFontSize 15
+skinparam swimlaneTitleFontStyle bold
+skinparam ActivityBackgroundColor #E0F2FE
+skinparam ActivityBorderColor #0284C7
+skinparam ActivityFontColor #0F172A
+skinparam ActivityDiamondBackgroundColor #FEF9C3
+skinparam ActivityDiamondBorderColor #CA8A04
+skinparam ActivityDiamondFontColor #713F12
+skinparam ArrowColor #475569
+skinparam ArrowFontColor #334155
+skinparam padding 4
+
+|Pengunjung|
+start
+:Buka website J6;
+:Klik tombol AI Assistant;
+:Ketik dan kirim pertanyaan;
+
+|Browser|
+:Muat dan tampilkan beranda;
+:Buka panel chat;
+:GET /api/status;
+if (Server online?) then (Ya)
+  :Tampilkan "Terhubung AI";
+else (Tidak)
+  :Tampilkan "Mode luring";
+endif
+:Tampilkan pesan + indikator mengetik;
+:POST /api/chat;
+
+|Server + OpenRouter|
+:Terima dan validasi request;
+if (Request valid?) then (Tidak)
+  :Kirim 400 Bad Request;
+else (Ya)
+  :Susun system prompt + riwayat;
+  :Panggil OpenRouter\n(timeout 30 detik, retry 3 kali);
+  :Proses model LLM; <<#FFEDD5>>
+  :Kembalikan jawaban atau error; <<#FFEDD5>>
+  if (Respons berhasil?) then (Ya)
+    :Kirim 200 answer dan model;
+  else (Tidak)
+    :Kirim 502 error dan code;
+  endif
+endif
+
+|Browser|
+if (Respons 200?) then (Ya)
+  :Render jawaban AI;
+else (Tidak)
+  :Fallback ke basis pengetahuan lokal;
+  :Render jawaban cadangan;
+endif
+:Simpan riwayat percakapan;
+
+|Pengunjung|
+:Baca jawaban;
+stop
+
+@enduml
+

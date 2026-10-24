@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I-HSSE Universitas Gunadarma J6 | Smart Safety Induction System</title>
+  <link rel="icon" type="image/png" href="favicon-32.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="description" content="Profil website I-HSSE Gedung J6 Universitas Gunadarma yang fokus pada kesehatan, keselamatan, keamanan, dan lingkungan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/style-new.css?v=9">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <img class="brand-logo" src="assets/images/logo-gunadarma.png" alt="Logo Universitas Gunadarma">
+        <div class="brand-text">
+          <div class="brand-name">I-HSSE</div>
+          <div class="brand-subtitle">Gedung J6 · Univ. Gunadarma</div>
+        </div>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Beranda</a></li>
+        <li><a href="health.html" class="nav-link">Health</a></li>
+        <li><a href="safety.html" class="nav-link">Safety</a></li>
+        <li><a href="security.html" class="nav-link">Security</a></li>
+        <li><a href="environment.html" class="nav-link">Environment</a></li>
+        <li><a href="videos.html" class="nav-link">Videos</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-icon" id="darkModeBtn" title="Dark Mode"><i class="bi bi-moon-stars"></i></button>
+        <button class="btn-icon" id="aiBtn" title="AI Assistant"><i class="bi bi-robot"></i></button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="hero-badge"><i class="bi bi-shield-fill-check"></i> Profil Website · Smart Safety Induction System</span>
+          <h1 class="hero-title">Induksi Keselamatan <span class="text-gradient">Gedung J6</span> Universitas Gunadarma</h1>
+          <p class="hero-desc">
+            Media informasi dan pembelajaran mengenai budaya keselamatan, keamanan, kesehatan,
+            serta kepedulian lingkungan di Gedung J6 — tersusun rapi agar mudah dipahami
+            seluruh civitas akademika.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="safety.html" class="btn btn-gradient"><i class="bi bi-play-circle"></i> Lihat Safety</a>
+            <button class="btn btn-outline-light" id="aiBtnHome" type="button"><i class="bi bi-robot"></i> Tanya AI</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- EMPAT PILAR HSSE -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="bi bi-grid-1x2"></i> Empat Pilar HSSE</span>
+        <h2 class="section-title">Jelajahi setiap aspek program keselamatan</h2>
+        <p class="section-description">Setiap menu memiliki fokus informasi yang dapat dibuka secara terpisah agar lebih mudah dipahami.</p>
+      </div>
+
+      <div class="pillar-grid">
+        <article class="pillar-card" style="--pillar-color: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);">
+          <div class="pillar-icon"><i class="bi bi-heart-pulse"></i></div>
+          <h3>Health</h3>
+          <p>Informasi tentang kawasan sehat, kebiasaan hidup sehat, dan layanan kesehatan kampus.</p>
+          <a href="health.html" class="card-link">Pelajari Selengkapnya <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="pillar-card" style="--pillar-color: linear-gradient(135deg, #ff9f1c 0%, #f86f0e 100%);">
+          <div class="pillar-icon"><i class="bi bi-fire"></i></div>
+          <h3>Safety</h3>
+          <p>APAR, hydrant, tangga darurat, dan prosedur evakuasi yang tersedia di gedung J6.</p>
+          <a href="safety.html" class="card-link">Pelajari Selengkapnya <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="pillar-card" style="--pillar-color: linear-gradient(135deg, #0084ff 0%, #00c6ff 100%);">
+          <div class="pillar-icon"><i class="bi bi-shield-check"></i></div>
+          <h3>Security</h3>
+          <p>Keamanan lingkungan, pemantauan CCTV, keteraturan akses, dan petugas keamanan.</p>
+          <a href="security.html" class="card-link">Pelajari Selengkapnya <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="pillar-card" style="--pillar-color: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);">
+          <div class="pillar-icon"><i class="bi bi-tree"></i></div>
+          <h3>Environment</h3>
+          <p>Program ramah lingkungan, pengelolaan sampah, dan upaya keberlanjutan kampus.</p>
+          <a href="environment.html" class="card-link">Pelajari Selengkapnya <i class="bi bi-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISI & FOKUS -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-panel">
+          <span class="section-subtitle"><i class="bi bi-info-circle"></i> Tentang Kami</span>
+          <h2>Misi I-HSSE</h2>
+          <p>
+            I-HSSE bertujuan menjadi sistem induksi yang membantu seluruh civitas akademika memahami pentingnya
+            kesehatan, keamanan, dan keberlanjutan di lingkungan Gedung J6. Website ini dirancang agar informasi
+            mudah diakses, informatif, dan relevan untuk kebutuhan sehari-hari.
+          </p>
+        </div>
+
+        <div class="about-panel">
+          <span class="section-subtitle"><i class="bi bi-bullseye"></i> Fokus Utama</span>
+          <h2>Arah Program</h2>
+          <ul class="focus-list">
+            <li><i class="bi bi-arrow-right-short"></i> Menumbuhkan kesadaran akan pentingnya keselamatan kerja.</li>
+            <li><i class="bi bi-arrow-right-short"></i> Menyediakan informasi cepat saat keadaan darurat.</li>
+            <li><i class="bi bi-arrow-right-short"></i> Memastikan area kampus tetap aman, sehat, dan nyaman.</li>
+            <li><i class="bi bi-arrow-right-short"></i> Mendorong lingkungan yang lebih hijau dan bertanggung jawab.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA DARURAT -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-text">
+          <h2 class="cta-title">Dalam keadaan darurat?</h2>
+          <p class="cta-desc">Jangan panik — hubungi nomor berikut, ikuti instruksi petugas, dan menuju titik kumpul di lapangan parkir depan Gedung J6.</p>
+        </div>
+        <div class="cta-numbers">
+          <a class="cta-number" href="tel:119"><strong>119</strong><span>Ambulans</span></a>
+          <a class="cta-number" href="tel:113"><strong>113</strong><span>Kebakaran</span></a>
+          <a class="cta-number" href="tel:110"><strong>110</strong><span>Polisi</span></a>
+          <a class="cta-number" href="tel:+6281286084411"><strong>Satpam</strong><span>Pos J6</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALAMAT, PETA & KONTAK PENTING -->
+  <section class="section" id="kontak">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle"><i class="bi bi-geo-alt"></i> Alamat & Kontak</span>
+        <h2 class="section-title">Lokasi Gedung J6 & layanan sekitar</h2>
+        <p class="section-description">Alamat gedung, klinik, dan kantor kepolisian terdekat beserta nomor yang bisa dihubungi. Klik nomor untuk langsung menelepon, atau buka peta lokasi layanannya.</p>
+      </div>
+
+      <!-- Lokasi utama: Gedung J6 -->
+      <div class="location-feature">
+        <div class="location-feature-info">
+          <div class="address-card-head">
+            <div class="address-icon address-icon-gedung"><i class="bi bi-building"></i></div>
+            <div>
+              <span class="address-tag">Lokasi Utama</span>
+              <h3>Gedung J6 — Universitas Gunadarma</h3>
+            </div>
+          </div>
+          <p class="address-text"><i class="bi bi-geo-alt-fill"></i> Kampus J6 Universitas Gunadarma, Jl. KH. Noer Ali, Jakasampurna, Kec. Bekasi Barat, Kota Bekasi, Jawa Barat 17145</p>
+
+          <dl class="detail-list">
+            <div class="detail-row">
+              <dt><i class="bi bi-clock"></i> Jam Operasional</dt>
+              <dd>Senin – Sabtu, 08.00 – 21.00 WIB</dd>
+            </div>
+            <div class="detail-row">
+              <dt><i class="bi bi-shield-fill-check"></i> Pos Keamanan</dt>
+              <dd>Lantai 1, siaga 24 jam</dd>
+            </div>
+            <div class="detail-row">
+              <dt><i class="bi bi-people-fill"></i> Petugas Satpam</dt>
+              <dd>5 petugas terdaftar</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Klinik dr. Aidah -->
+        <article class="address-card">
+          <div class="address-card-head">
+            <div class="address-icon address-icon-health"><i class="bi bi-hospital"></i></div>
+            <div>
+              <span class="address-tag">Layanan Kesehatan</span>
+              <h3>Klinik dr. Aidah</h3>
+            </div>
+          </div>
+          <p class="address-text"><i class="bi bi-geo-alt-fill"></i> Jl. Al Amin RT 06/01 No. 50, RT.006/RW.001, Jakamulya, Kec. Bekasi Selatan, Kota Bekasi, Jawa Barat 17146</p>
+          <div class="card-actions">
+            <a class="address-phone" href="tel:+6281210640450">
+              <i class="bi bi-telephone-fill"></i>
+              <span><strong>0812-1064-0450</strong></span>
+            </a>
+            <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&query=Klinik+dr.+Aidah+Jl.+Al+Amin+Jakamulya+Bekasi+Selatan" target="_blank" rel="noopener">
+              <i class="bi bi-map"></i> Peta
+            </a>
+          </div>
+        </article>
+
+        <!-- Klinik Jagad Buana -->
+        <article class="address-card">
+          <div class="address-card-head">
+            <div class="address-icon address-icon-health"><i class="bi bi-hospital"></i></div>
+            <div>
+              <span class="address-tag">Layanan Kesehatan</span>
+              <h3>Klinik Pondok Pengobatan Jagad Buana</h3>
+            </div>
+          </div>
+          <p class="address-text"><i class="bi bi-geo-alt-fill"></i> Jl. Anggrek Perumahan Pondok Cikunir Indah No.12 Blk A4, RT.014/RW.012, Jatibening, Kec. Pondok Gede, Kota Bekasi, Jawa Barat 17412</p>
+          <div class="card-actions">
+            <a class="address-phone" href="tel:+622519553325">
+              <i class="bi bi-telephone-fill"></i>
+              <span><strong>(021) 9553-325</strong></span>
+            </a>
+            <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&query=Klinik+Pondok+Pengobatan+Jagad+Buana+Pondok+Cikunir+Indah+Jatibening" target="_blank" rel="noopener">
+              <i class="bi bi-map"></i> Peta
+            </a>
+          </div>
+        </article>
+
+        <!-- Polsek Bekasi Selatan -->
+        <article class="address-card">
+          <div class="address-card-head">
+            <div class="address-icon address-icon-security"><i class="bi bi-shield-lock"></i></div>
+            <div>
+              <span class="address-tag">Keamanan</span>
+              <h3>Polsek Bekasi Selatan</h3>
+            </div>
+          </div>
+          <p class="address-text"><i class="bi bi-geo-alt-fill"></i> Jl. Pulo Ribung No.3, RT.010/RW.013, Pekayon Jaya, Kec. Bekasi Selatan, Kota Bekasi, Jawa Barat 17148</p>
+          <div class="card-actions">
+            <a class="address-phone" href="tel:+622182402647">
+              <i class="bi bi-telephone-fill"></i>
+              <span><strong>(021) 8240-2647</strong></span>
+            </a>
+            <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&query=Polsek+Bekasi+Selatan+Jl.+Pulo+Ribung+No.3+Pekayon+Jaya" target="_blank" rel="noopener">
+              <i class="bi bi-map"></i> Peta
+            </a>
+          </div>
+        </article>
+
+        <!-- Pos Keamanan Gedung J6 + nomor satpam -->
+        <article class="address-card accent-card satpam-card">
+          <div class="satpam-card-intro">
+            <div class="address-card-head">
+              <div class="address-icon address-icon-satpam"><i class="bi bi-building-fill-check"></i></div>
+              <div>
+                <span class="address-tag">Keamanan Gedung</span>
+                <h3>Pos Keamanan Gedung J6</h3>
+              </div>
+            </div>
+            <p class="address-text"><i class="bi bi-geo-alt-fill"></i> Pos keamanan lantai 1 Gedung J6, Universitas Gunadarma — siaga 24 jam untuk keamanan dan bantuan darurat.</p>
+            <ul class="satpam-facts">
+              <li><i class="bi bi-clock-history"></i> Siaga 24 jam</li>
+              <li><i class="bi bi-people-fill"></i> 5 petugas terdaftar</li>
+            </ul>
+          </div>
+
+          <div class="satpam-card-contacts">
+            <span class="satpam-block-title"><i class="bi bi-telephone-fill"></i> Nomor Satpam Gunadarma J6</span>
+            <ul class="satpam-list">
+              <li>
+                <a href="tel:+6281286084411">
+                  <span class="satpam-avatar">A</span>
+                  <span class="satpam-name">Aris</span>
+                  <span class="satpam-number">+62 812-8608-4411</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+6282124099560">
+                  <span class="satpam-avatar">W</span>
+                  <span class="satpam-name">Warsito</span>
+                  <span class="satpam-number">+62 821-2409-9560</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+6281386699062">
+                  <span class="satpam-avatar">T</span>
+                  <span class="satpam-name">Topik</span>
+                  <span class="satpam-number">+62 813-8669-9062</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+6285718698056">
+                  <span class="satpam-avatar">S</span>
+                  <span class="satpam-name">Sahrul</span>
+                  <span class="satpam-number">+62 857-1869-8056</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+628111094467">
+                  <span class="satpam-avatar">A</span>
+                  <span class="satpam-name">Atang</span>
+                  <span class="satpam-number">+62 811-1094-467</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <div class="footer-brand-row">
+              <img class="brand-logo" src="assets/images/logo-gunadarma.png" alt="Logo Universitas Gunadarma">
+              <div class="brand-text">
+                <div class="brand-name">I-HSSE J6</div>
+                <div class="brand-subtitle">Smart Safety Induction System</div>
+              </div>
+            </div>
+            <p>Website profil I-HSSE Gedung J6 Universitas Gunadarma — memudahkan pengunjung memahami profil, prosedur, dan budaya keselamatan di gedung.</p>
+          </div>
+
+          <div class="footer-column">
+            <h4><i class="bi bi-menu-button-wide"></i> Menu</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="health.html">Health</a></li>
+              <li><a href="safety.html">Safety</a></li>
+              <li><a href="security.html">Security</a></li>
+              <li><a href="environment.html">Environment</a></li>
+              <li><a href="videos.html">Videos</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4><i class="bi bi-telephone-fill"></i> Kontak Darurat</h4>
+            <ul class="footer-contact">
+              <li><i class="bi bi-heart-pulse"></i> Ambulans: <a href="tel:119">119</a></li>
+              <li><i class="bi bi-fire"></i> Kebakaran: <a href="tel:113">113</a></li>
+              <li><i class="bi bi-shield-lock"></i> Polisi: <a href="tel:110">110</a></li>
+            </ul>
+            <h4 class="footer-subhead"><i class="bi bi-building-fill-check"></i> Satpam Gunadarma J6</h4>
+            <ul class="footer-contact footer-contact-compact">
+              <li><i class="bi bi-person-badge"></i> Aris: <a href="tel:+6281286084411">+62 812-8608-4411</a></li>
+              <li><i class="bi bi-person-badge"></i> Warsito: <a href="tel:+6282124099560">+62 821-2409-9560</a></li>
+              <li><i class="bi bi-person-badge"></i> Topik: <a href="tel:+6281386699062">+62 813-8669-9062</a></li>
+            </ul>
+            <a class="footer-more" href="index.html#kontak"><i class="bi bi-plus-circle"></i> Lihat semua kontak & peta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 I-HSSE Universitas Gunadarma J6. All rights reserved.</p>
+        <span class="footer-badge"><i class="bi bi-shield-fill-check"></i> Health · Safety · Security · Environment</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Tutup modal">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/script-new.js?v=13"></script>
+</body>
+</html>

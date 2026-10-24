@@ -1,0 +1,25 @@
+%% Diagram 5 — Arsitektur Sistem
+%% Komponen dan hubungan antar bagian
+flowchart LR
+    BR["Browser<br/>6 halaman HTML"]
+    SRV["server.js<br/>HTTP Server Node.js"]
+    OR["OpenRouter API<br/>chat/completions"]
+    LLM["Model LLM<br/>mis. Llama 3.3 70B"]
+
+    ENV[".env<br/>API key, model, port"]
+    FILES["File statis<br/>HTML, CSS, JS, video"]
+    KB["Basis pengetahuan lokal<br/>script-new.js"]
+
+    BR -->|"HTTP: halaman, aset,<br/>/api/chat, /api/status"| SRV
+    ENV -->|"konfigurasi"| SRV
+    FILES -->|"dibaca"| SRV
+    SRV -->|"HTTPS + Bearer token"| OR
+    OR <-->|"prompt / completion"| LLM
+    BR -.->|"fallback saat offline"| KB
+
+    classDef client fill:#dbeafe,color:#1e3a8a,stroke:#2563eb,stroke-width:1.5px;
+    classDef server fill:#dcfce7,color:#14532d,stroke:#16a34a,stroke-width:1.5px;
+    classDef cloud fill:#ffedd5,color:#7c2d12,stroke:#ea580c,stroke-width:1.5px;
+    class BR,KB client;
+    class SRV,ENV,FILES server;
+    class OR,LLM cloud;

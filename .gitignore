@@ -1,0 +1,6 @@
+# File sensitif
+.env
+.env.bak-*
+
+# File backup/temp
+*.bak

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview Diagram — I-HSSE Gedung J6</title>
+  <style>
+    :root {
+      --navy: #0f172a;
+      --blue: #0284c7;
+      --muted: #64748b;
+      --line: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f1f5f9;
+      color: var(--navy);
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; font-size: 26px; }
+    header p { margin: 0; color: #cbd5e1; font-size: 14px; }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      display: grid;
+      gap: 28px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+    .card-head {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .card-head .no {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      background: var(--blue);
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+    .card-head h2 { margin: 0; font-size: 17px; }
+    .card-head .src {
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--muted);
+      font-family: Consolas, monospace;
+    }
+    .card a { display: block; padding: 16px; background: #fff; }
+    .card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .card .caption {
+      padding: 0 20px 18px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Preview Diagram — I-HSSE Gedung J6</h1>
+    <p>Klik gambar untuk membuka ukuran penuh · file sumber ada di folder <code>diagrams/</code></p>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="card-head">
+        <span class="no">01</span>
+        <h2>Use Case Diagram</h2>
+        <span class="src">01-use-case.puml</span>
+      </div>
+      <a href="png/01-use-case.png" target="_blank">
+        <img src="png/01-use-case.png" alt="Use Case Diagram">
+      </a>
+      <p class="caption">Aktor Pengunjung dan Admin beserta fitur utama website, termasuk relasi include dan extend.</p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <span class="no">02</span>
+        <h2>Activity Diagram (Swimlane)</h2>
+        <span class="src">02-activity-chatbot.puml</span>
+      </div>
+      <a href="png/02-activity-chatbot.png" target="_blank">
+        <img src="png/02-activity-chatbot.png" alt="Activity Diagram">
+      </a>
+      <p class="caption">Alur penggunaan I-HSSE Assistant dari sisi Pengunjung, Browser, serta Server + OpenRouter.</p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <span class="no">03</span>
+        <h2>Sequence Diagram</h2>
+        <span class="src">03-sequence-chat.mmd</span>
+      </div>
+      <a href="png/03-sequence-chat.png" target="_blank">
+        <img src="png/03-sequence-chat.png" alt="Sequence Diagram">
+      </a>
+      <p class="caption">Urutan pesan antara Browser, server.js, dan OpenRouter, termasuk kondisi berhasil dan gagal.</p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <span class="no">04</span>
+        <h2>Flowchart Alur Sistem</h2>
+        <span class="src">04-flowchart-sistem.mmd</span>
+      </div>
+      <a href="png/04-flowchart-sistem.png" target="_blank">
+        <img src="png/04-flowchart-sistem.png" alt="Flowchart">
+      </a>
+      <p class="caption">Perjalanan pengunjung dari membuka website, memilih menu, sampai selesai.</p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <span class="no">05</span>
+        <h2>Arsitektur Sistem</h2>
+        <span class="src">05-arsitektur.mmd</span>
+      </div>
+      <a href="png/05-arsitektur.png" target="_blank">
+        <img src="png/05-arsitektur.png" alt="Arsitektur Sistem">
+      </a>
+      <p class="caption">Komponen browser, server lokal, file statis, OpenRouter, dan model LLM beserta hubungannya.</p>
+    </section>
+  </main>
+
+  <footer>
+    I-HSSE Gedung J6 · Universitas Gunadarma · dibuat otomatis dari kode <code>server.js</code> dan <code>script-new.js</code>
+  </footer>
+</body>
+</html>

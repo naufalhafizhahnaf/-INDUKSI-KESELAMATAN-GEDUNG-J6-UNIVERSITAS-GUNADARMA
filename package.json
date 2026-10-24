@@ -1,0 +1,14 @@
+{
+  "name": "i-hsse-gedung-j6",
+  "version": "1.0.0",
+  "description": "I-HSSE Smart Safety Induction Gedung J6 Universitas Gunadarma",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

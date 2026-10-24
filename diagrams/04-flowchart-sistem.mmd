@@ -1,0 +1,36 @@
+%% Diagram 4 — Flowchart Alur Sistem
+%% Perjalanan pengguna dari membuka website sampai selesai
+flowchart TD
+    A([Mulai]) --> B[Buka website<br/>I-HSSE Gedung J6]
+    B --> C[Tampilkan beranda<br/>dan empat pilar HSSE]
+    C --> D{Menu yang<br/>dipilih?}
+
+    D -->|Health, Safety,<br/>Security, Environment| E[Tampilkan halaman<br/>informasi pilar]
+    D -->|Videos| F[Tampilkan galeri<br/>video]
+    D -->|Tanya AI| G[Buka I-HSSE Assistant]
+
+    E --> H[Buka detail<br/>informasi]
+    F --> I[Putar video]
+    G --> J[Kirim pertanyaan<br/>ke server]
+    J --> J2[Server memanggil<br/>OpenRouter]
+    J2 --> K{Jawaban<br/>tersedia?}
+
+    K -->|Ya| L[Tampilkan jawaban AI]
+    K -->|Tidak| M[Tampilkan jawaban<br/>dari basis lokal]
+
+    H --> N{Selesai?}
+    I --> N
+    L --> N
+    M --> N
+
+    N -->|Belum| C
+    N -->|Ya| Z([Selesai])
+
+    classDef startEnd fill:#0f172a,color:#ffffff,stroke:#0f172a,stroke-width:2px;
+    classDef decision fill:#fef9c3,color:#713f12,stroke:#ca8a04,stroke-width:2px;
+    classDef ai fill:#ede9fe,color:#4c1d95,stroke:#7c3aed,stroke-width:1.5px;
+    classDef content fill:#ecfeff,color:#155e75,stroke:#0891b2,stroke-width:1.5px;
+    class A,Z startEnd;
+    class D,K,N decision;
+    class G,J,J2,L,M ai;
+    class E,F,H,I content;

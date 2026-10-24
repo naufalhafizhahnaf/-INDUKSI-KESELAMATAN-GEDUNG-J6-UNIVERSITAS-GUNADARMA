@@ -1,0 +1,58 @@
+@startuml 01-use-case
+' Diagram 1 — Use Case Diagram
+' Sistem I-HSSE Gedung J6 Universitas Gunadarma
+
+left to right direction
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName Segoe UI
+skinparam defaultFontSize 14
+skinparam packageStyle rectangle
+skinparam usecase {
+  BackgroundColor #E0F2FE
+  BorderColor #0284C7
+  FontColor #0F172A
+  FontSize 13
+}
+skinparam actor {
+  BorderColor #0F172A
+  FontColor #0F172A
+  FontSize 14
+}
+skinparam rectangle {
+  BackgroundColor #F8FAFC
+  BorderColor #94A3B8
+  FontColor #0F172A
+  FontSize 15
+}
+skinparam ArrowColor #475569
+
+actor "Pengunjung" as P
+actor "Admin /\nPengelola" as A
+
+rectangle "Sistem I-HSSE Gedung J6" {
+  usecase "Melihat beranda dan\nprofil HSSE" as UC1
+  usecase "Menjelajah halaman Health,\nSafety, Security, Environment" as UC2
+  usecase "Membuka detail informasi" as UC3
+  usecase "Menonton video induksi\nkeselamatan" as UC4
+  usecase "Mengubah mode terang / gelap" as UC5
+  usecase "Bertanya kepada\nI-HSSE Assistant (AI)" as UC6
+  usecase "Mendapat jawaban cadangan\ndari basis pengetahuan lokal" as UC7
+  usecase "Mengatur API key dan\nmenjalankan server" as UC8
+  usecase "Memantau status layanan AI" as UC9
+}
+
+P -- UC1
+P -- UC2
+P -- UC4
+P -- UC5
+P -- UC6
+
+UC2 ..> UC3 : <<include>>
+UC6 ..> UC7 : <<extend>>
+
+A -- UC8
+A -- UC9
+UC8 ..> UC9 : <<include>>
+
+@enduml
